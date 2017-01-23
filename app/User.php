@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Answer;
 
 class User extends Authenticatable
 {
@@ -26,4 +27,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Rated answers
+     */
+    public ratedAnswers(){
+        $this->belongsToMany(Answer::class, 'ratings');
+    }
 }
