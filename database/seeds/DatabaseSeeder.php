@@ -21,7 +21,9 @@ class DatabaseSeeder extends Seeder
      */
     protected $toSeed = [
         UsersTableSeeder::class,
-        QuestionsTableSeeder::class
+        QuestionsTableSeeder::class,
+        AnswersTableSeeder::class,
+        RatingTableSeeder::class
     ];
 
     /**
