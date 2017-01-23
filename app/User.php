@@ -31,7 +31,7 @@ class User extends Authenticatable
     /**
      * Rated answers
      */
-    public ratedAnswers(){
+    public function ratedAnswers(){
         $this->belongsToMany(Answer::class, 'ratings');
     }
 }
