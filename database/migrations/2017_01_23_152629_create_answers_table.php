@@ -19,7 +19,10 @@ class CreateAnswersTable extends Migration
 
             // Question which belongs to
             $table->integer('question_id')->unsigned();
-            $table->foreign('question_id')->references('id')->on('questions');
+            $table->foreign('question_id')
+                ->references('id')
+                ->on('questions')
+                ->onDelete('cascade');
 
             // Answer's author
             $table->integer('user_id')->unsigned();
