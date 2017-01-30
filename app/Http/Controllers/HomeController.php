@@ -26,8 +26,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $questions  = Question::with(['user','answers'])->orderBy('id', 'desc')->take(10)->get();
-        $users      = User::orderBy('id', 'desc')->take(5)->get();
+        $numQuestions = 8;
+        $numUsers = 5;
+
+        $questions  = Question::with(['user','answers'])
+            ->orderBy('id', 'desc')
+            ->take($numQuestions)
+            ->get();
+
+        $users      = User::orderBy('id', 'desc')->take($numUsers)->get();
 
         return view('home', compact(['questions', 'users']));
     }

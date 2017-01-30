@@ -1,5 +1,5 @@
 <div class="question-snippet">
-    <h4 class="question-snippet__title">{{$question->title}}</h4>
+    <h3 class="question-snippet__title"><a href="#">{{$question->title}}</a></h3>
     <div class="question-sippet__extra">
         <div class="question-sippet__author">
             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
